@@ -15,11 +15,11 @@ from handlers import (
     process_filling,
     process_wishes,
     process_full_name,
-    process_date_time,
     process_product,
     process_design_photo,
     process_design_text,
     process_delivery_type,
+    process_weight,
     process_phone_number,
     ai_command,
     process_description_ai,
@@ -71,7 +71,7 @@ dp.register_message_handler(lambda message, state: process_wishes(message, state
 dp.register_message_handler(lambda message, state: process_full_name(message, state, bot),
                             state=OrderState.full_name, run_task=True)
 
-dp.register_message_handler(lambda message, state: process_date_time(message, state, bot),
+dp.register_message_handler(lambda message, state: process_weight(message, state, bot),
                             state=OrderState.date_time, run_task=True)
 
 dp.register_message_handler(lambda message, state: process_product(message, state, bot),
