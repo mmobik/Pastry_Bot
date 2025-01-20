@@ -17,8 +17,5 @@ main_menu_kb.add(KeyboardButton(text='Главное меню'))
 # Клавиатура выбора начинки
 filling_kb = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 filling_kb.add(
-    KeyboardButton(text='Сникерс'),
-    KeyboardButton(text='Ваниль'),
-    KeyboardButton(text='Мед'),
     KeyboardButton(text='Главное меню'),
 )
