@@ -17,7 +17,7 @@ class Text2ImageAPI:
             'X-Secret': f'Secret {secret_key}',
         }
 
-    def get_model(self) -> str:  # Получаем айди моедли
+    def get_model(self) -> str:  # Получаем айди модели
         response = requests.get(self.url + 'key/api/v1/models', headers=self.auth_headers)
         response.raise_for_status()
         data = response.json()
