@@ -31,7 +31,7 @@
 1.  ⚙️**Установка зависимостей:**
 
     ```bash
-    pip install aiogram nest_asyncio pillow requests
+    pip install aiogram==2.23.1 nest_asyncio pillow requests
     ```
     
 2.  🔑 **Настройка `config.py`:**   аполните  `TOKEN`, `ADMIN_ID`, и ключи API для [Fusion Brain](https://fusionbrain.ai/).
