@@ -32,7 +32,7 @@ async def filling_command(message: types.Message, bot: Bot):
     await bot.send_message(
         chat_id=message.from_user.id,
         text='\n•Милка- шоколадные коржи, мусс на белом шоколаде, ганаш на молочном шоколаде \
-        \n•Дан Панчо- шоколадный бисквит в прослойке с вишней \
+        \n•Дон Панчо- шоколадный бисквит в прослойке с вишней \
         \n•Шоколадный бархат - шоколадные коржи с кремом на основе взбитых сливок и шоколада \
         \n•Сникерс - шоколадные коржи, со сливочной карамелью, жареным арахисом и шоколадным муссом \
         \n•Рафаэлло - ванильный бисквит с жареным миндалем кокосом крем на основе маскарпоне \
@@ -115,10 +115,10 @@ async def process_full_name(message: types.Message, state: FSMContext, bot: Bot)
     await state.set_state(OrderState.date_time)
 
 
-async def process_date_time(message: types.Message, state: FSMContext, bot: Bot):
+async def process_weight(message: types.Message, state: FSMContext, bot: Bot):
     await bot.send_message(
         chat_id=message.from_user.id,
-        text='Изделие?', reply_markup=main_menu_kb, parse_mode='HTML')
+        text='Вес?', reply_markup=main_menu_kb, parse_mode='HTML')
     await state.update_data(date_time=message.text)
     await state.set_state(OrderState.product)
 
@@ -149,7 +149,7 @@ async def process_design_text(message: types.Message, state: FSMContext, bot: Bo
     await state.update_data(design_type='text', design=message.text)
     await bot.send_message(
         chat_id=message.from_user.id,
-        text='Доставка или самовывоз?\nЕсли доставка, оставьте еще в новой строке адрес и время',
+        text='Доставка или самовывоз?\nЕсли доставка, оставьте в строке адрес и время',
         reply_markup=main_menu_kb,
     )
     await state.set_state(OrderState.delivery_type)
