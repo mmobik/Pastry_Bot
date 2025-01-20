@@ -8,8 +8,8 @@ class OrderState(StatesGroup):
     wishes = State()  # Пожелания
     full_name = State()  # Полное ФИО
     date_time = State()  # Примерная дата
-    product = State()  # Изделие
     design = State()  # Дизайн
+    product = State() # Вес
     delivery_type = State()  # Тип доставки
     phone_number = State()  # Номер телефона
 
