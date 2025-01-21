@@ -34,7 +34,7 @@
     pip install aiogram==2.23.1 nest_asyncio pillow requests
     ```
     
-2.  🔑 **Настройка `config.py`:**   аполните  `TOKEN`, `ADMIN_ID`, и ключи API для [Fusion Brain](https://fusionbrain.ai/).
+2.  🔑 **Настройка `config.py`:**   Заполните  `TOKEN`, `ADMIN_ID`, и ключи API для [Fusion Brain](https://fusionbrain.ai/).
 
 3. 🚀 **Запуск бота:**
 
